@@ -1,0 +1,150 @@
+/* ------------------------- */
+/* Custom properties */
+/* ------------------------- */
+:root {
+
+    /* colors */
+    --clr-dark: 11 13 23;
+    --clr-light: 208 214 249;
+    --clr-white: 255 255 255;
+    
+    /* font-sizes */
+    --fs-400: 
+
+}
+
+/* ------------------------- */
+/* Reset */
+/* ------------------------- */
+
+/* Box sizing */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+/* set up the body */
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* makes images to work with */
+img,
+picture {
+    display: block;
+    max-width: 100%;
+}
+
+/* makes forms easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* remove animations for people that turned them off */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ------------------------- */
+/* Utility classes */
+/* ------------------------- */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem)
+}
+
+.container {
+    padding-inline: 2em;
+    max-width: 80rem;
+    margin-inline: auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    /* added line */
+    border: 0;
+}
+
+.box {
+    background-color: lightblue;
+    padding: 3rem;
+    gap: var(--gap, 2rem)
+}
+
+.call-to-action {
+    --gap: 5em;
+    background-color: pink;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/* Colors section */
+
+.bg-dark {
+    background-color: rgb(var(--clr-dark));
+}
+
+.bg-accent {
+    background-color: rgb(var(--clr-light));
+}
+
+.bg-white {
+    background-color: rgb(var(--clr-white));
+}
+
+.text-dark {
+    color: rgb(var(--clr-dark));
+}
+
+.text-accent {
+    color: rgb(var(--clr-light));
+    ;
+}
+
+.text-white {
+    color: rgb(var(--clr-white));
+}
+
+.example-component {
+    background-color: rgba(var(--clr-light) / .2)
+}
